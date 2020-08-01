@@ -1,0 +1,35 @@
+{
+  "name": "freela",
+  "version": "0.0.1",
+  "description": "Exemplo for freela",
+  "main": "./src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon index.js",
+    "migrate:make": "knex migrate:make",
+    "migrate:up": "knex migrate:latest",
+    "migrate:down": "knex migrate:rollback",
+    "seed:run": "knex seed:run",
+    "seed:make": "knex seed:make",
+    "test:all": "--reporter spec --exit test/**/*.js"
+  },
+  "author": "Júlio Guedes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JulioGuedesCordeiro/apiFreela"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bookshelf": "^0.10.3",
+    "bookshelf-cascade-delete": "^2.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^4.0.0",
+    "express": "^4.17.1",
+    "heroku": "^7.39.2",
+    "knex": "^0.12.7",
+    "moment": "^2.27.0",
+    "nodemon": "^2.0.2",
+    "pg": "^6.1.2"
+  }
+}
