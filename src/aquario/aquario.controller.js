@@ -10,7 +10,7 @@ module.exports.listar = async (req, res, next) => {
     const temperatura =  JSON.parse(JSON.stringify(models))[0].temperatura;
     const umidade = JSON.parse(JSON.stringify(models))[0].umidade;
     const datahora = JSON.parse(JSON.stringify(models))[0].criado_em;
-    const hora = new Date(datahora).getHours();
+    const hora = new Date(datahora).getHours() - 3;
     const minutos = new Date(datahora).getMinutes();
     const segundos = new Date(datahora).getSeconds();
     return res.status(200).json({ message: `A hora da ultima medição foi realizada ás ${hora}:${minutos}:${segundos} com temperatura de ${temperatura} C e umidade de ${umidade}%` });
