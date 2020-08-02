@@ -57,8 +57,8 @@ module.exports.listar = async (req, res, next) => {
          }
          .box {
           font-color: red;
-         width: 350px;
-         height: 150px;
+         width: 420px;
+         height: 230px;
          background-color: #f00;
          }
       </style>`);
