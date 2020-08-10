@@ -12,6 +12,9 @@ var Aquario = bookshelf.Model.extend(
     async obter(id) {
       return this.forge({ id: id }).fetch();
     },
+    async deletar() {
+      return this.destroy().then((resposta) => {console.log('JJJJ', resposta)});
+    }
   }
 );
 
